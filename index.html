@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annabelle Brown - Professional Portfolio</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -15,10 +19,13 @@
         }
         
         header {
-            background: linear-gradient(to right, #2c3e50, #4ca1af);
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         
         .navbar {
@@ -174,7 +181,7 @@
     </style>
 </head>
 <body>
-    <header style="position: relative; overflow: hidden; height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <header>
         <video autoplay loop muted style="position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: 0; top: 0; left: 0;">
             <source src="video.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -184,9 +191,17 @@
                 <h1 style="margin: 0; font-size: 6vw; letter-spacing: 2px; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">ANNABELLE BROWN</h1>
             </div>
         </div>
+        <div style="position: absolute; bottom: 30px; z-index: 2;">
+            <a href="#content" style="color: white; text-decoration: none; font-size: 16px; display: flex; flex-direction: column; align-items: center;">
+                <span>Scroll Down</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 5px;">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+        </div>
     </header>
     
-    <div class="navbar">
+    <div id="content" class="navbar">
         <a href="index.html">About</a>
         <a href="content.html">Portfolio</a>
     </div>
