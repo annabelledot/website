@@ -68,13 +68,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
-        .profile-video {
-            width: 320px;
-            height: 240px;
-            border-radius: 10px;
-            border: 5px solid #4ca1af;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
+        
         
         .profile-info {
             max-width: 600px;
@@ -180,9 +174,15 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Annabelle Brown</h1>
-        <p>Communications and Branding Manager | Project Management Professional</p>
+    <header style="position: relative; overflow: hidden; height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <video autoplay loop muted style="position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: 0; top: 0; left: 0;">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div style="position: relative; z-index: 1; text-align: center; padding: 20px; background-color: rgba(44, 62, 80, 0.7); border-radius: 10px;">
+            <h1>Annabelle Brown</h1>
+            <p>Creative Problem Solver</p>
+        </div>
     </header>
     
     <div class="navbar">
@@ -193,11 +193,6 @@
     <div class="container">
         <section id="about" class="profile-section">
             <img src="image.png" alt="Annabelle Brown" class="profile-image">
-            
-            <video class="profile-video" autoplay loop muted>
-                <source src="video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
             
             <div class="profile-info">
                 <h2 class="section-title">About Me</h2>
